@@ -10,14 +10,14 @@ FORMAT_SCORE = "Verdana 20"
 
 
 class ScoreDial(tk.Frame):
-    def __init__(self, master, name=""):
+    def __init__(self, master, name="", color="black"):
         super().__init__(master, relief=tk.RIDGE, borderwidth=3)
 
         tk.Label(master=self, text=name, font=FORMAT_NAME).grid(row=0, column=0, columnspan=4, sticky=tk.EW)
 
         # Add score
         self.current_score = tk.IntVar(master=self, value=0)
-        tk.Label(master=self, textvariable=self.current_score, font=FORMAT_SCORE).grid(row=1, column=0, columnspan=4, sticky=tk.EW)
+        tk.Label(master=self, textvariable=self.current_score, font=FORMAT_SCORE, fg=color).grid(row=1, column=0, columnspan=4, sticky=tk.EW)
 
         # Add buttons for updating the score
         tk.Button(master=self, text=f"-{BIG_INC}", command=partial(self.update_score, -BIG_INC)).grid(row=2, column=0)
