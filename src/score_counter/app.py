@@ -8,7 +8,7 @@ class ScoreCounter(tk.Tk):
 
         # Create a dial for each player
         for player in range(n_player):
-            ScoreDial(master=self, name=f"Player {player}").grid(row=0, column=player)
+            ScoreDial(master=self, name=f"Player {player}").grid(row=player, column=0)
 
     def run(self):
         self.mainloop()
