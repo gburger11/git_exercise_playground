@@ -3,7 +3,7 @@ import tkinter as tk
 
 
 NORMAL_INC = 1
-BIG_INC = 10
+BIG_INC = 5
 
 FORMAT_NAME = "Verdana 15 bold"
 FORMAT_SCORE = "Verdana 20"
