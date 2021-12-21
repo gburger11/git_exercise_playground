@@ -1,4 +1,6 @@
 from functools import partial
+from pathlib import Path
+import random
 import tkinter as tk
 
 
@@ -25,5 +27,12 @@ class ScoreDial(tk.Frame):
         tk.Button(master=self, text=f"+{NORMAL_INC}", command=partial(self.update_score, +NORMAL_INC)).grid(row=2, column=2)
         tk.Button(master=self, text=f"+{BIG_INC}", command=partial(self.update_score, +BIG_INC)).grid(row=2, column=3)
 
+        # Add special double button
+        self.magic_img = tk.PhotoImage(master=self, file=Path(__file__).parent / "images" / "magic.png")
+        tk.Button(master=self, image=self.magic_img, text="+ rand", command=self.add_random, compound=tk.LEFT).grid(row=3, column=0, columnspan=4, sticky=tk.EW)
+
     def update_score(self, increment):
         self.current_score.set(self.current_score.get() + increment)
+
+    def add_random(self):
+        self.current_score.set(self.current_score.get() + random.randint(0, BIG_INC))
