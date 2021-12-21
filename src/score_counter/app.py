@@ -2,6 +2,7 @@ import tkinter as tk
 from .score_dial import ScoreDial
 
 
+PLAYERS = ["pierre", "paul", "jacques"]
 COLORS = ["red", "blue", "green"]
 
 
@@ -10,8 +11,8 @@ class ScoreCounter(tk.Tk):
         super().__init__()
 
         # Create a dial for each player
-        for player, color in enumerate(COLORS):
-            ScoreDial(master=self, name=f"Player {player}", color=color).grid(row=0, column=player)
+        for idx, (player, color) in enumerate(zip(PLAYERS, COLORS)):
+            ScoreDial(master=self, name=player, color=color).grid(row=0, column=idx)
 
     def run(self):
         self.mainloop()
