@@ -1,4 +1,5 @@
 from functools import partial
+from pathlib import Path
 import tkinter as tk
 
 
@@ -25,5 +26,12 @@ class ScoreDial(tk.Frame):
         tk.Button(master=self, text=f"+{NORMAL_INC}", command=partial(self.update_score, +NORMAL_INC)).grid(row=2, column=2)
         tk.Button(master=self, text=f"+{BIG_INC}", command=partial(self.update_score, +BIG_INC)).grid(row=2, column=3)
 
+        # Add special double button
+        self.star_img = tk.PhotoImage(master=self, file=Path(__file__).parent / "images" / "star.png")
+        tk.Button(master=self, image=self.star_img, text="x2", command=self.double_score, compound=tk.LEFT).grid(row=3, column=0, columnspan=4, sticky=tk.EW)
+
     def update_score(self, increment):
         self.current_score.set(self.current_score.get() + increment)
+
+    def double_score(self):
+        self.current_score.set(self.current_score.get() * 2)
