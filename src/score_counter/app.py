@@ -3,6 +3,9 @@ from .score_dial import ScoreDial
 
 
 class ScoreCounter(tk.Tk):
+    """
+    This class displays a simple score counter composed of several dials (one per player).
+    """
     def __init__(self, n_player=2):
         super().__init__()
 
