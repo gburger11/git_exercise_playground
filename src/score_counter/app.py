@@ -3,7 +3,7 @@ from .score_dial import ScoreDial
 
 
 PLAYERS = ["pierre", "paul", "jacques"]
-COLORS = ["red", "blue", "green"]
+COLORS = ["pink", "cyan", "orange"]
 
 
 class ScoreCounter(tk.Tk):
