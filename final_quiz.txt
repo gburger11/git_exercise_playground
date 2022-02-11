@@ -1,0 +1,45 @@
+- What is git? Give one main difference with systems such as Dropbox?
+
+
+- Can you benefit from Git without a copy on a server?
+
+
+
+- On your computer (in local), how many areas do you have?
+
+
+- What is the command to apply a change in your working directory to the staging area?
+
+
+- You have added a function called `convert_currencies` in your code. You commit the change. What could be a meaningful
+  message be for this commit?
+
+
+- What should you always do before committing?
+
+
+- In git status, what are the colors used to describe what is in the working directory and in the staging area
+  respectively?
+
+
+- What does `git diff --staged` compares?
+
+
+- Once a file is in the staging area, it cannot be removed. True or False?
+
+
+- Several commits could have the same sha?
+
+
+- What is the command to change of branch? #iamtarzan
+
+
+- Conflicts during cherry-pick or rebase means that you have made a mistake with your git commands. True or false?
+
+
+- What are the two commands to synchronize your local repository with remote repository in both directions?
+
+
+- What is Gitlab?
+
+
